@@ -10,6 +10,7 @@ namespace IsNumberEven
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Podaj liczbę: ");
             try 
             { 
                 if(!int.TryParse(Console.ReadLine(), out var number))
