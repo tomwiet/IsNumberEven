@@ -10,6 +10,28 @@ namespace IsNumberEven
     {
         static void Main(string[] args)
         {
+            try 
+            { 
+                if(!int.TryParse(Console.ReadLine(), out var number))
+                    throw new Exception("Podałes wartośc która nie jest liczbą");
+                
+                if (number % 2 == 0)
+                {
+                    Console.WriteLine("Liczpa parzysta");
+                }
+                else
+                {
+                    Console.WriteLine("Liczba nieparzysta");
+                }
+            }
+            catch (Exception ex) 
+            { 
+                Console.WriteLine(ex.Message);
+            }
+            finally 
+            { 
+                Console.ReadLine(); 
+            }
         }
     }
 }
